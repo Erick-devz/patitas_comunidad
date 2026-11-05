@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/estilos.css">
+    <title>Patitas en Comunidad</title>
+</head>
+<body>
+
+    <header>
+        <h1>Patitas en Comunidad</h1>
+        <p>Vecinos unidos para ayudar a los animales</p>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#proyecto">Nuestro proyecto</a>
+            <a href="#publicar">Publicar reporte</a>
+            <a href="#reportes">Ver reportes</a>
+            <a href="#equipo">Nuestro equipo</a>
+            <a href="/html/adopcion.html">Adopta un perrito</a>
+            <a href="/html/solicitudes.html">Solicitudes</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="inicio">
+            <h2>Ayudemos a los animales de nuestra comunidad</h2>
+
+            <p>
+                Patitas en Comunidad es una página para compartir información
+                sobre animales perdidos, animales encontrados y animales
+                callejeros que podrían necesitar ayuda.
+            </p>
+
+            <p>
+                La comunidad podrá publicar avisos y consultar los reportes
+                para ayudar a que un animal regrese con su familia o encuentre
+                apoyo.
+            </p>
+        </section>
+
+        <section id="proyecto">
+            <h2>¿Qué problema queremos atender?</h2>
+
+            <p>
+                A veces una mascota se pierde y su familia no sabe dónde
+                buscarla. También hay vecinos que encuentran animales o ven
+                animales callejeros que necesitan atención. La información
+                puede quedar separada entre muchas publicaciones y ser difícil
+                de encontrar.
+            </p>
+
+            <p>
+                Nuestro proyecto reúne esos avisos en un solo lugar para que
+                los vecinos puedan consultarlos y compartirlos.
+            </p>
+
+            <h3>¿Cuál es nuestro objetivo?</h3>
+
+            <p>
+                Crear una página sencilla donde se puedan publicar y consultar
+                reportes de animales de la comunidad.
+            </p>
+
+            <h3>¿A quién está dirigida?</h3>
+
+            <p>
+                Está dirigida a vecinos que perdieron o encontraron un animal,
+                o que desean compartir información sobre un animal callejero.
+            </p>
+        </section>
+
+        <section id="como-funciona">
+            <h2>¿Cómo funciona?</h2>
+
+            <ol>
+                <li>Una persona llena el formulario con la información que conoce.</li>
+                <li>El reporte aparece en la sección de reportes.</li>
+                <li>Los vecinos consultan los avisos y comparten la información.</li>
+                <li>Cuando el caso se resuelve, el reporte podrá marcarse como atendido.</li>
+            </ol>
+        </section>
+
+        <section id="publicar">
+            <h2>Publicar un reporte</h2>
+
+            <p>
+                Completa los campos obligatorios. Si no conoces un dato opcional,
+                puedes dejarlo vacío.
+            </p>
+
+            <p>
+                Por seguridad, escribe una colonia o zona general. No publiques
+                tu dirección exacta.
+            </p>
+
+            <form id="formularioReporte" action="#" method="post">
+
+                <label for="tipoReporte">¿Qué quieres reportar?</label>
+                <select id="tipoReporte" name="tipoReporte" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="perdido">Una mascota que se perdió</option>
+                    <option value="encontrado">Un animal que encontré</option>
+                    <option value="callejero">Un animal callejero que vi</option>
+                </select>
+
+                <br><br>
+
+                <label for="tipoAnimal">¿Qué tipo de animal es?</label>
+                <input
+                    type="text"
+                    id="tipoAnimal"
+                    name="tipoAnimal"
+                    placeholder="Por ejemplo: perro, gato o conejo"
+                    maxlength="40"
+                    required
+                >
+
+                <br><br>
+
+                <label for="nombreAnimal">Nombre del animal, si lo sabes:</label>
+                <input
+                    type="text"
+                    id="nombreAnimal"
+                    name="nombreAnimal"
+                    placeholder="Este dato es opcional"
+                    maxlength="50"
+                >
+
+                <br><br>
+
+                <label for="descripcion">Descripción del animal o del caso:</label>
+                <textarea
+                    id="descripcion"
+                    name="descripcion"
+                    placeholder="Escribe su color, tamaño, señas particulares o qué ayuda necesita"
+                    maxlength="500"
+                    required
+                ></textarea>
+
+                <br><br>
+
+                <label for="zona">Colonia o zona donde se perdió o fue visto:</label>
+                <input
+                    type="text"
+                    id="zona"
+                    name="zona"
+                    placeholder="Escribe una zona general, no una dirección exacta"
+                    maxlength="100"
+                    required
+                >
+
+                <br><br>
+
+                <label for="fecha">Fecha aproximada del reporte:</label>
+                <input type="date" id="fecha" name="fecha">
+
+                <br><br>
+
+                <label for="telefono">Teléfono de contacto, si deseas compartirlo:</label>
+                <input
+                    type="tel"
+                    id="telefono"
+                    name="telefono"
+                    placeholder="Este dato es opcional"
+                    maxlength="20"
+                >
+
+                <br><br>
+
+                <label for="correo">Correo de contacto, si deseas compartirlo:</label>
+                <input
+                    type="email"
+                    id="correo"
+                    name="correo"
+                    placeholder="ejemplo@correo.com"
+                    maxlength="100"
+                >
+
+                <br><br>
+
+                <button type="submit">Enviar reporte</button>
+
+            </form>
+        </section>
+
+        <section id="reportes">
+            <h2>Reportes de la comunidad</h2>
+
+            <p>
+                Aquí aparecerán los reportes publicados. Por ahora, esta sección
+                solo explica dónde se mostrarán.
+            </p>
+
+            <p>Estado del reporte: pendiente de revisión.</p>
+        </section>
+
+        <section id="reglas">
+            <h2>Reglas para publicar</h2>
+
+            <ul>
+                <li>Escribe información clara y verdadera.</li>
+                <li>No publiques la dirección exacta de una persona.</li>
+                <li>No publiques información de otras personas sin permiso.</li>
+                <li>No uses la página para insultar o molestar a alguien.</li>
+                <li>Si un animal está herido, busca ayuda de un adulto o de un servicio de atención animal.</li>
+            </ul>
+        </section>
+
+        <section id="equipo">
+            <h2>¿Quiénes somos?</h2>
+
+            <p>
+                Somos dos estudiantes que estamos creando este proyecto para
+                apoyar a nuestra comunidad y promover el cuidado responsable
+                de los animales.
+            </p>
+
+            <h3>Integrantes</h3>
+
+            <ul>
+                <li>Integrante 1: escribe aquí su nombre.</li>
+                <li>Integrante 2: escribe aquí su nombre.</li>
+            </ul>
+
+            <h3>¿Qué aprenderemos?</h3>
+
+            <p>
+                En este proyecto practicaremos cómo crear una página web,
+                organizar información y, en las siguientes etapas, conectar
+                el sistema con una base de datos.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Patitas en Comunidad — Proyecto escolar</p>
+    </footer>
+<script src="/js/app.js"></script>
+</body>
+</html>
